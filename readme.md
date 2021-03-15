@@ -22,4 +22,4 @@ C API
 The library provides a C interface for `ParticleMesh`.
 As in the C++ case, the user must derive a C++ class from `handler_t` for
 particles' read/write. In addition the user must write a C interface 
-(only for the constructor and destructor) for the derived `handler_t` class.
+for the constructor of the derived `handler_t` class.
