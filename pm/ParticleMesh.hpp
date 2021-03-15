@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <cstdlib>
 #include <array>
 
@@ -13,8 +14,8 @@ struct handler_t
 
 struct ParticleMesh
 {
-    const handler_t& H;
-    ParticleMesh(const handler_t& ph) : H(ph)
+    std::unique_ptr<handler_t> H;
+    ParticleMesh(handler_t* ph) : H( ph )
     {}
     
     int sum() const ;

@@ -53,9 +53,7 @@ int main()
     P.push_back({1.5,1.,1.});
     P.push_back({2.,3.,4.7});
     
-    my_handler H(P,10.);
-    
-    ParticleMesh pm(H);
+    ParticleMesh pm(new my_handler(P,10.0));
     
     std::cout << "pm.sum() = " << pm.sum() << '\n';
     pm.change();

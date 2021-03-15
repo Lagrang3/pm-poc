@@ -19,14 +19,12 @@ int main()
     P[1].Pos[1] = 3.0;
     P[1].Pos[2] = 4.7;
     
-    my_handler * H = handler_new(P,2,10.0); 
-    ParticleMesh* pm = pm_new(H);
+    ParticleMesh* pm = pm_new( handler_new(P,2,10.0) );
     printf("pm.sum() = %d\n",pm_sum(pm));
     pm_change(pm);
     printf("pm.sum() = %d\n",pm_sum(pm));
     
     pm_free(pm);
-    handler_free(H);
     free(P);
     return 0;
 }

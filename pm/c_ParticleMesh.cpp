@@ -6,7 +6,7 @@ extern "C" {
 
 ParticleMesh* pm_new(handler_t* H)
 {
-    return new ParticleMesh(*H);
+    return new ParticleMesh(H);
 }
 void pm_free(ParticleMesh* pm)
 {
