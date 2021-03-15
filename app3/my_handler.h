@@ -9,7 +9,7 @@ extern "C" {
 typedef struct my_handler my_handler;
 
 my_handler* handler_new(my_particle_data* , size_t, double);
-void handler_free(my_handler*);
+// void handler_free(my_handler*);
 
 #ifdef __cplusplus
 }

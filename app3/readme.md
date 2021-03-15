@@ -17,9 +17,5 @@ my_handler* handler_new(my_particle_data* P, size_t n, double l)
 {
     return new my_handler(P,n,l);
 }
-void handler_free(my_handler* h)
-{
-    delete h;
-}
 }
 ```
